@@ -1,0 +1,62 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "whythereisasushi:rice_crop",
+                  "properties": {
+                    "age": "7"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 2.0
+                }
+              ],
+              "name": "whythereisasushi:rice_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "whythereisasushi:rice_seeds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "whythereisasushi:rice_crop",
+              "properties": {
+                "age": "7"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2.0
+            }
+          ],
+          "name": "whythereisasushi:rice"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/crop",
+  "render_type": "cutout",
+  "textures": {
+    "crop": "whythereisasushi:block/rice_crop_stage2",
+    "particle": "whythereisasushi:block/rice_crop_stage2"
+  }
+}

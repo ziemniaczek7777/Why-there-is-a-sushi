@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "whythereisasushi:nori_sheet",
+    "whythereisasushi:cooked_rice"
+
+
+  ],
+  "result": {
+    "id": "whythereisasushi:shari_maki",
+    "count": 1
+  }
+}

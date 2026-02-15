@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "whythereisasushi:item/glow_maki",
+    "layer1": "whythereisasushi:item/glow_maki_emissive"
+  }
+}

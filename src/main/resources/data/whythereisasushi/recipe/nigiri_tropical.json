@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "whythereisasushi:cooked_rice",
+    "minecraft:tropical_fish"
+
+
+  ],
+  "result": {
+    "id": "whythereisasushi:nigiri_tropical",
+    "count": 1
+  }
+}

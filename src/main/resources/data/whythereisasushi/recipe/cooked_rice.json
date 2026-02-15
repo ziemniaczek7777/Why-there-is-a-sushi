@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "whythereisasushi:rice",
+  "result": {
+    "id": "whythereisasushi:cooked_rice"
+  },
+  "experience": 0.5,
+  "cookingtime": 200
+}

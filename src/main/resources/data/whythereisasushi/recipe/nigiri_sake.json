@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "whythereisasushi:cooked_rice",
+    "minecraft:salmon"
+
+
+  ],
+  "result": {
+    "id": "whythereisasushi:nigiri_sake",
+    "count": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "whythereisasushi:nori_sheet",
+    "whythereisasushi:cooked_rice",
+    "minecraft:chorus_fruit"
+
+
+  ],
+  "result": {
+    "id": "whythereisasushi:chorus_maki",
+    "count": 1
+  }
+}

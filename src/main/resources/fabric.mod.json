@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "whythereisasushi",
+	"version": "${version}",
+	"name": "Whythereisasushi",
+	"description": "Brings new type of food to minecraft",
+	"authors": [
+		"Hirens"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/whythereisasushi/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.ziemniak.whythereisasushi.Whythereisasushi"
+		],
+		"client": [
+			"net.ziemniak.whythereisasushi.WhythereisasushiClient"
+		],
+		"fabric-datagen": [
+			"net.ziemniak.whythereisasushi.WhythereisasushiDataGenerator"
+		]
+	},
+	"mixins": [
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

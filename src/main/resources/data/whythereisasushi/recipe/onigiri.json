@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "# #",
+    " C "
+  ],
+  "key": {
+    "#": "whythereisasushi:cooked_rice",
+    "C": "whythereisasushi:nori_sheet"
+  },
+  "result": {
+    "id": "whythereisasushi:onigiri",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "whythereisasushi:cooked_rice",
+    "minecraft:pufferfish"
+
+
+  ],
+  "result": {
+    "id": "whythereisasushi:nigiri_pufferfish",
+    "count": 1
+  }
+}

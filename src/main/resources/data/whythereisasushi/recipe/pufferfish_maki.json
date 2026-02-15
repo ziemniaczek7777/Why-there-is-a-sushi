@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "whythereisasushi:nori_sheet",
+    "whythereisasushi:cooked_rice",
+    "minecraft:pufferfish"
+
+
+  ],
+  "result": {
+    "id": "whythereisasushi:pufferfish_maki",
+    "count": 1
+  }
+}
