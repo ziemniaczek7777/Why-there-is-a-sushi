@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "whythereisasushi:cooked_rice",
+    "minecraft:honey_bottle"
+
+
+  ],
+  "result": {
+    "id": "whythereisasushi:nigiri_honey",
+    "count": 1
+  }
+}

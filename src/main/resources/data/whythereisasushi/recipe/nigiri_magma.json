@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "whythereisasushi:cooked_rice",
+    "minecraft:magma_cream"
+
+
+  ],
+  "result": {
+    "id": "whythereisasushi:nigiri_magma",
+    "count": 1
+  }
+}

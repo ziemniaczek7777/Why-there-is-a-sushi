@@ -12,6 +12,13 @@ public class Whythereisasushi implements ModInitializer {
 
 
 	@Override
-	public void onInitialize() {ModItems.registerModItems();
+	public void onInitialize() {
+		ModItems.registerModItems();
+		net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback.EVENT.register((stack, context, type, lines) -> {
+			if (stack.isOf(ModItems.CHOPSTICKS)) {
+				lines.add(net.minecraft.text.Text.translatable("item.whythereisasushi.chopsticks.description")
+						.formatted(net.minecraft.util.Formatting.GRAY, net.minecraft.util.Formatting.ITALIC));
+			}
+		});
 	}
 }

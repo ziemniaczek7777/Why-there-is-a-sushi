@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:gold_ingot",
+    "S": "whythereisasushi:shari_maki"
+  },
+  "result": {
+    "id": "whythereisasushi:golden_maki",
+    "count": 1
+  }
+}

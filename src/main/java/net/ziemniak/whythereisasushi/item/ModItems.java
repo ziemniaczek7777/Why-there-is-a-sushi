@@ -1,8 +1,10 @@
 package net.ziemniak.whythereisasushi.item;
 
+import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.FoodComponent;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -17,10 +19,12 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
+import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.ziemniak.whythereisasushi.Whythereisasushi;
 import net.ziemniak.whythereisasushi.block.ModBlocks;
+import org.spongepowered.asm.mixin.injection.selectors.ElementNode;
 
 import java.util.function.Function;
 
@@ -67,14 +71,54 @@ public class ModItems {
             .consumeEffect(new ApplyEffectsConsumeEffect(
                     new StatusEffectInstance(StatusEffects.SLOW_FALLING, 400, 0), 1f))
             .build();
+    public static final ConsumableComponent GOLDEN_CONSUMABLE = ConsumableComponent.builder()
+            .consumeEffect(new ApplyEffectsConsumeEffect(
+                    new StatusEffectInstance(StatusEffects.ABSORPTION, 1200, 1), 1f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(
+                    new StatusEffectInstance(StatusEffects.REGENERATION, 400, 1), 1f))
+            .build();
+    public static final ConsumableComponent HEALTH_CONSUMABLE = ConsumableComponent.builder()
+            .consumeEffect(new ApplyEffectsConsumeEffect(
+                    new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 6000, 2), 1f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(
+                    new StatusEffectInstance(StatusEffects.REGENERATION, 200, 1), 1f))
+            .build();
+    public static final ConsumableComponent UNDER_CONSUMABLE = ConsumableComponent.builder()
+            .consumeEffect(new ApplyEffectsConsumeEffect(
+                    new StatusEffectInstance(StatusEffects.CONDUIT_POWER, 2400, 0), 1f))
+            .build();
 
 
+    public static final Item CHOPSTICKS = registerItem("chopsticks",
+            settings -> new Item(settings.maxCount(1)),
+            new Item.Settings());
     public static final Item MAGMA_MAKI = registerItem("magma_maki",
             settings -> new Item(settings
                     .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.7f).alwaysEdible().build())
                     .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, MAGMA_CONSUMABLE)
             ), new Item.Settings());
+    public static final Item NIGIRI_MAGMA = registerItem("nigiri_magma",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.7f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, MAGMA_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item HEALTH_MAKI = registerItem("health_maki",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.7f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, HEALTH_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NIGIRI_HEALTH = registerItem("nigiri_health",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.7f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, HEALTH_CONSUMABLE)
+            ), new Item.Settings());
+
     public static final Item RABBIT_MAKI = registerItem("rabbit_maki",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, RABBIT_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NIGIRI_RABBIT = registerItem("nigiri_rabbit",
             settings -> new Item(settings
                     .food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).alwaysEdible().build())
                     .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, RABBIT_CONSUMABLE)
@@ -84,7 +128,17 @@ public class ModItems {
                     .food(new FoodComponent.Builder().nutrition(3).saturationModifier(0.4f).alwaysEdible().build())
                     .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, GLOW_CONSUMABLE)
             ), new Item.Settings());
+    public static final Item NIGIRI_GLOW = registerItem("nigiri_glow",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(3).saturationModifier(0.4f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, GLOW_CONSUMABLE)
+            ), new Item.Settings());
     public static final Item CHORUS_MAKI = registerItem("chorus_maki",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(6).saturationModifier(0.6f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, CHORUS_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NIGIRI_CHORUS = registerItem("nigiri_chorus",
             settings -> new Item(settings
                     .food(new FoodComponent.Builder().nutrition(6).saturationModifier(0.6f).alwaysEdible().build())
                     .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, CHORUS_CONSUMABLE)
@@ -94,10 +148,40 @@ public class ModItems {
                     .food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).alwaysEdible().build())
                     .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, HONEY_CONSUMABLE)
             ), new Item.Settings());
+    public static final Item NIGIRI_HONEY = registerItem("nigiri_honey",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, HONEY_CONSUMABLE)
+            ), new Item.Settings());
     public static final Item PHANTOM_MAKI = registerItem("phantom_maki",
             settings -> new Item(settings
                     .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.5f).alwaysEdible().build())
                     .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, PHANTOM_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NIGIRI_PHANTOM = registerItem("nigiri_phantom",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.5f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, PHANTOM_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item GOLDEN_MAKI = registerItem("golden_maki",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.8f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, GOLDEN_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NIGIRI_GOLDEN = registerItem("nigiri_golden",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.8f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, GOLDEN_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NIGIRI_NAUTILUS = registerItem("nigiri_nautilus",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(6).saturationModifier(0.8f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, UNDER_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NAUTILUS_MAKI = registerItem("nautilus_maki",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(6).saturationModifier(0.8f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, UNDER_CONSUMABLE)
             ), new Item.Settings());
 
     public static final Item NORI_SHEET = registerItem("nori_sheet", Item::new, new Item.Settings());
@@ -174,7 +258,18 @@ public class ModItems {
             entries.add(CHORUS_MAKI);
             entries.add(HONEY_MAKI);
             entries.add(PHANTOM_MAKI);
-
+            entries.add(GOLDEN_MAKI);
+            entries.add(HEALTH_MAKI);
+            entries.add(NIGIRI_MAGMA);
+            entries.add(NIGIRI_HEALTH);
+            entries.add(NIGIRI_RABBIT);
+            entries.add(NIGIRI_GLOW);
+            entries.add(NIGIRI_CHORUS);
+            entries.add(NIGIRI_HONEY);
+            entries.add(NIGIRI_PHANTOM);
+            entries.add(NIGIRI_GOLDEN);
+            entries.add(NIGIRI_NAUTILUS);
+            entries.add(NAUTILUS_MAKI);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
@@ -183,6 +278,9 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(NORI_SHEET);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
+            entries.add(CHOPSTICKS);
         });
     }
     public static final ItemGroup SUSHI_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -211,5 +309,19 @@ public class ModItems {
                         entries.add(CHORUS_MAKI);
                         entries.add(HONEY_MAKI);
                         entries.add(PHANTOM_MAKI);
+                        entries.add(GOLDEN_MAKI);
+                        entries.add(CHOPSTICKS);
+                        entries.add(HEALTH_MAKI);
+                        entries.add(NIGIRI_MAGMA);
+                        entries.add(NIGIRI_HEALTH);
+                        entries.add(NIGIRI_RABBIT);
+                        entries.add(NIGIRI_GLOW);
+                        entries.add(NIGIRI_CHORUS);
+                        entries.add(NIGIRI_HONEY);
+                        entries.add(NIGIRI_PHANTOM);
+                        entries.add(NIGIRI_GOLDEN);
+                        entries.add(NIGIRI_NAUTILUS);
+                        entries.add(NAUTILUS_MAKI);
                     }).build());
+
 }

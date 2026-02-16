@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "whythereisasushi:item/nigiri_glow",
+    "layer1": "whythereisasushi:item/nigiri_glow_emissive"
+  }
+}

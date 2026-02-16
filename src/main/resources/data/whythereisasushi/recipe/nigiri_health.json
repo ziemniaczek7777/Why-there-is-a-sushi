@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "whythereisasushi:cooked_rice",
+    "minecraft:glistering_melon_slice",
+    "minecraft:ghast_tear"
+
+  ],
+  "result": {
+    "id": "whythereisasushi:nigiri_health",
+    "count": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "whythereisasushi:nori_sheet",
+    "whythereisasushi:cooked_rice",
+    "minecraft:nautilus_shell"
+
+
+  ],
+  "result": {
+    "id": "whythereisasushi:nautilus_maki",
+    "count": 1
+  }
+}

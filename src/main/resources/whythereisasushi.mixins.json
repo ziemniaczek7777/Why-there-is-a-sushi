@@ -3,7 +3,8 @@
 	"package": "net.ziemniak.whythereisasushi.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"ItemUsageMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

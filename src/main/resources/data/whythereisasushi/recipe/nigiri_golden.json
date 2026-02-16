@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:gold_ingot",
+    "S": "whythereisasushi:cooked_rice"
+  },
+  "result": {
+    "id": "whythereisasushi:nigiri_golden",
+    "count": 1
+  }
+}
