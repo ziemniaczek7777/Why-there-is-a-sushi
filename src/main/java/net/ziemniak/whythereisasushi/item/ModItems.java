@@ -97,87 +97,50 @@ public class ModItems {
                     .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.7f).alwaysEdible().build())
                     .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, MAGMA_CONSUMABLE)
             ), new Item.Settings());
-    public static final Item NIGIRI_MAGMA = registerItem("nigiri_magma",
-            settings -> new Item(settings
-                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.7f).alwaysEdible().build())
-                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, MAGMA_CONSUMABLE)
-            ), new Item.Settings());
+
     public static final Item HEALTH_MAKI = registerItem("health_maki",
             settings -> new Item(settings
                     .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.7f).alwaysEdible().build())
                     .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, HEALTH_CONSUMABLE)
             ), new Item.Settings());
-    public static final Item NIGIRI_HEALTH = registerItem("nigiri_health",
-            settings -> new Item(settings
-                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.7f).alwaysEdible().build())
-                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, HEALTH_CONSUMABLE)
-            ), new Item.Settings());
+
 
     public static final Item RABBIT_MAKI = registerItem("rabbit_maki",
             settings -> new Item(settings
                     .food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).alwaysEdible().build())
                     .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, RABBIT_CONSUMABLE)
             ), new Item.Settings());
-    public static final Item NIGIRI_RABBIT = registerItem("nigiri_rabbit",
-            settings -> new Item(settings
-                    .food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).alwaysEdible().build())
-                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, RABBIT_CONSUMABLE)
-            ), new Item.Settings());
+
     public static final Item GLOW_MAKI = registerItem("glow_maki",
             settings -> new Item(settings
                     .food(new FoodComponent.Builder().nutrition(3).saturationModifier(0.4f).alwaysEdible().build())
                     .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, GLOW_CONSUMABLE)
             ), new Item.Settings());
-    public static final Item NIGIRI_GLOW = registerItem("nigiri_glow",
-            settings -> new Item(settings
-                    .food(new FoodComponent.Builder().nutrition(3).saturationModifier(0.4f).alwaysEdible().build())
-                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, GLOW_CONSUMABLE)
-            ), new Item.Settings());
+
     public static final Item CHORUS_MAKI = registerItem("chorus_maki",
             settings -> new Item(settings
                     .food(new FoodComponent.Builder().nutrition(6).saturationModifier(0.6f).alwaysEdible().build())
                     .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, CHORUS_CONSUMABLE)
             ), new Item.Settings());
-    public static final Item NIGIRI_CHORUS = registerItem("nigiri_chorus",
-            settings -> new Item(settings
-                    .food(new FoodComponent.Builder().nutrition(6).saturationModifier(0.6f).alwaysEdible().build())
-                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, CHORUS_CONSUMABLE)
-            ), new Item.Settings());
+
     public static final Item HONEY_MAKI = registerItem("honey_maki",
             settings -> new Item(settings
                     .food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).alwaysEdible().build())
                     .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, HONEY_CONSUMABLE)
             ), new Item.Settings());
-    public static final Item NIGIRI_HONEY = registerItem("nigiri_honey",
-            settings -> new Item(settings
-                    .food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).alwaysEdible().build())
-                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, HONEY_CONSUMABLE)
-            ), new Item.Settings());
+
     public static final Item PHANTOM_MAKI = registerItem("phantom_maki",
             settings -> new Item(settings
                     .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.5f).alwaysEdible().build())
                     .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, PHANTOM_CONSUMABLE)
             ), new Item.Settings());
-    public static final Item NIGIRI_PHANTOM = registerItem("nigiri_phantom",
-            settings -> new Item(settings
-                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.5f).alwaysEdible().build())
-                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, PHANTOM_CONSUMABLE)
-            ), new Item.Settings());
+
     public static final Item GOLDEN_MAKI = registerItem("golden_maki",
             settings -> new Item(settings
                     .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.8f).alwaysEdible().build())
                     .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, GOLDEN_CONSUMABLE)
             ), new Item.Settings());
-    public static final Item NIGIRI_GOLDEN = registerItem("nigiri_golden",
-            settings -> new Item(settings
-                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.8f).alwaysEdible().build())
-                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, GOLDEN_CONSUMABLE)
-            ), new Item.Settings());
-    public static final Item NIGIRI_NAUTILUS = registerItem("nigiri_nautilus",
-            settings -> new Item(settings
-                    .food(new FoodComponent.Builder().nutrition(6).saturationModifier(0.8f).alwaysEdible().build())
-                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, UNDER_CONSUMABLE)
-            ), new Item.Settings());
+
     public static final Item NAUTILUS_MAKI = registerItem("nautilus_maki",
             settings -> new Item(settings
                     .food(new FoodComponent.Builder().nutrition(6).saturationModifier(0.8f).alwaysEdible().build())
@@ -212,6 +175,8 @@ public class ModItems {
 
     public static final Item COD_MAKI = registerItem("cod_maki",
             settings -> new Item(settings.food(new FoodComponent.Builder().nutrition(6).saturationModifier(0.7f).alwaysEdible().build())), new Item.Settings());
+    public static final Item FUTOMAKI = registerItem("futomaki",
+            settings -> new Item(settings.food(new FoodComponent.Builder().nutrition(10).saturationModifier(1.1f).alwaysEdible().build())), new Item.Settings());
 
     public static final Item NIGIRI_SAKE = registerItem("nigiri_sake",
             settings -> new Item(settings.food(new FoodComponent.Builder().nutrition(6).saturationModifier(0.8f).alwaysEdible().build())), new Item.Settings());
@@ -227,6 +192,51 @@ public class ModItems {
 
     public static final Item NIGIRI_COD = registerItem("nigiri_cod",
             settings -> new Item(settings.food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.6f).alwaysEdible().build())), new Item.Settings());
+    public static final Item NIGIRI_NAUTILUS = registerItem("nigiri_nautilus",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(6).saturationModifier(0.8f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, UNDER_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NIGIRI_GOLDEN = registerItem("nigiri_golden",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.8f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, GOLDEN_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NIGIRI_PHANTOM = registerItem("nigiri_phantom",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.5f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, PHANTOM_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NIGIRI_HONEY = registerItem("nigiri_honey",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, HONEY_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NIGIRI_CHORUS = registerItem("nigiri_chorus",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(6).saturationModifier(0.6f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, CHORUS_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NIGIRI_GLOW = registerItem("nigiri_glow",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(3).saturationModifier(0.4f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, GLOW_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NIGIRI_RABBIT = registerItem("nigiri_rabbit",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, RABBIT_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NIGIRI_HEALTH = registerItem("nigiri_health",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.7f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, HEALTH_CONSUMABLE)
+            ), new Item.Settings());
+    public static final Item NIGIRI_MAGMA = registerItem("nigiri_magma",
+            settings -> new Item(settings
+                    .food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.7f).alwaysEdible().build())
+                    .component(net.minecraft.component.DataComponentTypes.CONSUMABLE, MAGMA_CONSUMABLE)
+            ), new Item.Settings());
 
     public static final Item ONIGIRI = registerItem("onigiri",
             settings -> new Item(settings.food(new FoodComponent.Builder().nutrition(6).saturationModifier(0.8f).alwaysEdible().build())), new Item.Settings());
@@ -270,6 +280,7 @@ public class ModItems {
             entries.add(NIGIRI_GOLDEN);
             entries.add(NIGIRI_NAUTILUS);
             entries.add(NAUTILUS_MAKI);
+            entries.add(FUTOMAKI);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
@@ -322,6 +333,8 @@ public class ModItems {
                         entries.add(NIGIRI_GOLDEN);
                         entries.add(NIGIRI_NAUTILUS);
                         entries.add(NAUTILUS_MAKI);
+                        entries.add(FUTOMAKI);
                     }).build());
+
 
 }

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "N#N",
+    "#F#",
+    "N#N"
+  ],
+  "key": {
+    "#": "whythereisasushi:cooked_rice",
+    "N": "whythereisasushi:nori_sheet",
+    "F": "minecraft:salmon"
+  },
+  "result": {
+    "id": "whythereisasushi:futomaki",
+    "count": 1
+  }
+}

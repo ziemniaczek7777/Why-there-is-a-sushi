@@ -27,26 +27,6 @@ public class ModBlocks {
                     return ModItems.RICE_SEEDS;
                 }
             }, AbstractBlock.Settings.copy(Blocks.WHEAT));
-    public static final SushiTrayBlock SUSHI_TRAY = register(
-            "sushi_tray",
-            SushiTrayBlock::new,
-            Block.Settings.create().strength(2.0f)
-    );
-
-    private static <T extends Block> T register(String name,
-                                                Function<Block.Settings, T> factory,
-                                                Block.Settings settings) {
-        Identifier id = Identifier.of("whythereisasushi", name);
-        RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, id);
-
-        // rzutowanie fabryki do Function<Settings, Block>
-        Block block = Blocks.register(key, s -> (Block) factory.apply(s), settings);
-
-        // rejestrujemy odpowiadający BlockItem
-        Items.register(block);
-
-        return (T) block;
-    }
 
 
     // Ta metoda najpierw tworzy klucz, a potem tworzy blok

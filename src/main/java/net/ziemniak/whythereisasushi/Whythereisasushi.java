@@ -2,11 +2,7 @@ package net.ziemniak.whythereisasushi;
 
 import net.fabricmc.api.ModInitializer;
 import net.ziemniak.whythereisasushi.block.ModBlocks;
-import net.ziemniak.whythereisasushi.block.SushiTrayBlock;
-import net.ziemniak.whythereisasushi.block.entity.SushiBlockEntities;
 import net.ziemniak.whythereisasushi.item.ModItems;
-
-import net.ziemniak.whythereisasushi.screen.SushiScreenHandlers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,7 +22,5 @@ public class Whythereisasushi implements ModInitializer {
 			}
 		});
 		ModBlocks.registerModBlocks();
-		SushiBlockEntities.init();
-		SushiScreenHandlers.init();
 	}
 }
