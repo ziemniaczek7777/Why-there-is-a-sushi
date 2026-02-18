@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:wheat_seeds"
+
+
+  ],
+  "result": {
+    "id": "whythereisasushi:rice_seeds",
+    "count": 1
+  }
+}
