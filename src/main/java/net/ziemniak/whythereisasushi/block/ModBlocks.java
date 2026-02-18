@@ -28,12 +28,9 @@ public class ModBlocks {
                 }
             }, AbstractBlock.Settings.copy(Blocks.WHEAT));
 
-
-    // Ta metoda najpierw tworzy klucz, a potem tworzy blok
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Whythereisasushi.MOD_ID, name));
 
-        // Ważne: musimy ustawić klucz w ustawieniach (settings), żeby blok go znał od startu
         return Registry.register(Registries.BLOCK, key, factory.apply(settings.registryKey(key)));
     }
 

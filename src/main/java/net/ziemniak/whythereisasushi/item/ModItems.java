@@ -38,7 +38,7 @@ public class ModItems {
             .consumeEffect(new ApplyEffectsConsumeEffect(
                     new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 600, 0), 1f))
             .consumeEffect(new ApplyEffectsConsumeEffect(
-                    new StatusEffectInstance(StatusEffects.HUNGER, 400, 0), 0.1f))
+                    new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 10, 0), 1f))
             .build();
     public static final ConsumableComponent RABBIT_CONSUMABLE = ConsumableComponent.builder()
             .consumeEffect(new ApplyEffectsConsumeEffect(
@@ -162,7 +162,7 @@ public class ModItems {
             settings -> new Item(settings.food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.5f).alwaysEdible().build())), new Item.Settings());
 
     public static final Item SAKE_MAKI = registerItem("sake_maki",
-            settings -> new Item(settings.food(new FoodComponent.Builder().nutrition(7).saturationModifier(0.9f).alwaysEdible().build())), new Item.Settings());
+            settings -> new Item(settings.food(new FoodComponent.Builder().nutrition(7).saturationModifier(0.7f).alwaysEdible().build())), new Item.Settings());
 
     public static final Item TROPICAL_MAKI = registerItem("tropical_maki",
             settings -> new Item(settings.food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.6f).alwaysEdible().build())), new Item.Settings());
