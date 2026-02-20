@@ -1,6 +1,7 @@
 package net.ziemniak.whythereisasushi;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.block.ComposterBlock;
 import net.ziemniak.whythereisasushi.block.ModBlocks;
 import net.ziemniak.whythereisasushi.item.ModItems;
 import org.slf4j.Logger;
@@ -17,5 +18,13 @@ public class Whythereisasushi implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
+		ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(
+				ModItems.RICE_SEEDS,0.3F
+
+		);
+		ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(
+				ModItems.RICE,0.5F
+
+		);
 	}
 }
